@@ -38,8 +38,17 @@ Code: pizza3 = Pizza("large", ["pepperoni"])
 Expect: (pizza3.price()).toEqual(16)
 
 Test: "It should return a number based on the properties of the pizza object"
-Code: pizza4 = Pizza("medium")
+Code: const pizza4 = Pizza("medium")
 Expect: (pizza4.price()).toEqual(10)
+
+Describe: undefinedFilter()
+Test: "It should return an array without any undefined elements"
+Code: const three = 3; const uglyArray = ["one", 2, three, undefined, 5, undefined, "six"]
+Expect: (undefinedFilter(uglyArray)).toEqual(["one", 2, 3, 5, "six"])
+
+Describe: toppingsAssembler()
+Test: "It should return an array of strings with only the toppings selected in the HTML radio buttons"
+Expect: (toppingsAssembler()).toEqual(["topping1", "topping2", "topping3"])
 ```
 ## Contact Information
 #### Mike Pingel

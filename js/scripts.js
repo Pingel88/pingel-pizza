@@ -5,6 +5,8 @@ function Pizza(size, toppings) {
 
 Pizza.prototype.price = function() {
   console.log("started price prototype");
+  console.log(this.toppings);
+  console.log(this.size);
   let pizzaPrice = 0;
   let toppings = this.toppings;
   if (this.size === "small") {
@@ -23,12 +25,51 @@ Pizza.prototype.price = function() {
   return pizzaPrice;
 }
 
-pizza1 = new Pizza("small", ["olives", "sausage", "salami"]);
-pizza2 = new Pizza("medium", ["jalapenos", "tomato", "bacon", "pineapple", "ground beef", "onions"]);
-pizza3 = new Pizza("large", ["pepperoni"]);
-pizza4 = new Pizza("medium");
+function undefinedFilter(array) {
+  filteredArray = array.filter(function (element) {
+    return element != null;
+  });
+  console.log("line 32: " + array);
+  console.log("line 33: " + typeof(array));
+  console.log("line 34: " + filteredArray);
+  console.log("line 35: " + typeof(filteredArray));
+  return filteredArray;
+};
 
-console.log("Your pizza1 will cost $" + pizza1.price());
-console.log("Your pizza2 will cost $" + pizza2.price());
-console.log("Your pizza3 will cost $" + pizza3.price());
-console.log("Your pizza4 will cost $" + pizza4.price());
+$(document).ready(function() {
+  $("form#pizza").submit(function(event) {
+    event.preventDefault();
+    const pizzaSize = $("input:radio[name=pizza-size]:checked").val();
+    const pizzaToppings = toppingsAssembler();
+    const clientPizza = new Pizza(pizzaSize, pizzaToppings);
+    const clientPizza2 = new Pizza(pizzaSize, pizzaToppings);
+    console.log("line 45: " + clientPizza2);
+    console.log("line 46: " + pizzaSize);
+    console.log("line 47: " + pizzaToppings);
+    console.log("line 48: " + typeof(clientPizza.size));
+    console.log("line 49: " + typeof(clientPizza.toppings));
+    console.log("line 50: " + typeof(pizzaToppings));
+    $("#total-cost").show();
+    $("#pizza-total").html(clientPizza.price);
+  });
+});
+
+function toppingsAssembler() {
+  const pizzaToppings = [
+    $("input:radio[name=bacon]:checked").val(), 
+    $("input:radio[name=ground-beef]:checked").val(), 
+    $("input:radio[name=ham]:checked").val(), 
+    $("input:radio[name=italian-sausage]:checked").val(), 
+    $("input:radio[name=pepperoni]:checked").val(), 
+    $("input:radio[name=salami]:checked").val(), 
+    $("input:radio[name=garlic]:checked").val(), 
+    $("input:radio[name=green-bell-peppers]:checked").val(), 
+    $("input:radio[name=jalapenos]:checked").val(), 
+    $("input:radio[name=mushroom]:checked").val(), 
+    $("input:radio[name=olives]:checked").val(), 
+    $("input:radio[name=onion]:checked").val(), 
+    $("input:radio[name=pineapple]:checked").val(), 
+  ];
+  const filteredPizzaToppings = undefinedFilter(pizzaToppings);
+  return filteredPizzaToppings;
+};
