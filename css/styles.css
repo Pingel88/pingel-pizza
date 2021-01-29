@@ -10,10 +10,36 @@
   padding: 10px;
 }
 
-#box-1 {
-  flex: 1;
-  border: 1px solid black;
+
+#heading {
+  background-image: url('../img/pingel-pizza-banner.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
 }
+#transparent-banner {
+  vertical-align: top;
+  width: 100%;
+  opacity: 0;
+}
+
+#heading-text {
+  font-size: 30px;
+  top: 0;
+  width: 100%;
+  position: absolute;  
+  color: rgb(206, 159, 73);
+  text-shadow: 4px 4px 4px red;
+  text-align: center;
+}
+
+#heading-text > h1 {
+  font-family: 'Permanent Marker', cursive;
+}
+
+#heading-text > p {
+  font-family: 'Caveat', cursive;
+}
+
 
 #box-2 {
   flex: 1;
