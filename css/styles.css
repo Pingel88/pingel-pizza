@@ -1,3 +1,7 @@
+body {
+  padding: 50px;
+  }
+
 #total-cost {
   display: none;
   flex: 1;
@@ -40,7 +44,10 @@
   font-family: 'Caveat', cursive;
 }
 
-
+#box-1 {
+  flex: 1;
+  border: 1px solid black;
+}
 #box-2 {
   flex: 1;
   border: 1px solid black;

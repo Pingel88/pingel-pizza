@@ -17,46 +17,124 @@
     </div>
   </div>
   <div id="flex-container">
-  <div id="box-2">
+    <div id="box-1">
       <form class="pizza">
-        <p>Select your pizza size!</p>
-        <p>
-          Size:<br>
-          Small <input type="radio" id="small" name="pizza-size" value="small" label="small" required><br>
-          Medium <input type="radio" id="medium" name="pizza-size" value="medium" required><br>
-          Large <input type="radio" id="large" name="pizza-size" value="large"required>
-        </p>
+        <h2>Size</h2>
+          <div>
+            <input type="radio" id="small" name="pizza-size" value="small" label="small" required>
+            <label for="small">
+              Small
+            </label>
+          </div>
+          <div>
+            <input type="radio" id="medium" name="pizza-size" value="medium" required>
+            <label for="medium">
+              Medium
+            </label>
+          </div>
+          <div>
+            <input type="radio" id="large" name="pizza-size" value="large"required>
+            <label for="large">
+              Large
+            </label>
+          </div>
+      </form>
+    </div>
+    <div id="box-2">
+      <form class="pizza">
+        <h2>Meats</h2>
+        <div>
+          <input type="radio" id="bacon" name="bacon" value="bacon">
+          <label for="bacon">
+            Bacon
+          </label>
+        </div>
+        <div>
+          <input type="radio" id="ground-beef" name="ground-beef" value="ground-beef">
+          <label for="ground-beef">
+            Ground Beef
+          </label>
+        </div>
+        <div>
+          <input type="radio" id="ham" name="ham" value="ham">
+          <label for="ham">
+            Ham (Canadian Bacon)
+          </label>
+        </div>
+        <div>
+          <input type="radio" id="italian-sausage" name="italian-sausage" value="italian-sausage">
+          <label for="italian-sausage">
+            Italian Sausage
+          </label>
+        </div>
+        <div>
+          <input type="radio" id="pepperoni" name="pepperoni" value="pepperoni">
+          <label for="pepperoni">
+            Pepperoni
+          </label>
+        </div>
+        <div>
+          <input type="radio" id="salami" name="salami" value="salami">
+          <label for="salami">
+            Salami
+          </label>
+        </div>
       </form>
     </div>
     <div id="box-3">
       <form class="pizza">
-        <p>Select your pizza toppings</p>
-        <p>
-          Meats:<br>
-          Bacon <input type="radio" id="bacon" name="bacon" value="bacon"><br>
-          Ground Beef <input type="radio" id="ground-beef" name="ground-beef" value="ground-beef"><br>
-          Ham (Canadian Bacon) <input type="radio" id="ham" name="ham" value="ham"><br>
-          Italian Sausage <input type="radio" id="italian-sausage" name="italian-sausage" value="italian-sausage"><br>
-          Pepperoni <input type="radio" id="pepperoni" name="pepperoni" value="pepperoni"><br>
-          Salami <input type="radio" id="salami" name="salami" value="salami">
-        </p>
-        <p>
-          UnMeats:<br>
-          Garlic <input type="radio" id="garlic" name="garlic" value="garlic"><br>    
-          Green Bell Peppers <input type="radio" id="green-bell-peppers" name="green-bell-peppers" value="green-bell-peppers"><br>
-          Jalapeños <input type="radio" id="jalapenos" name="jalapenos" value="jalapenos"><br>
-          Mushroom <input type="radio" id="mushroom" name="mushroom" value="mushroom"><br>
-          Olives <input type="radio" id="olives" name="olives" value="olives"><br>
-          Onion <input type="radio" id="onion" name="onion" value="onion"><br>
-          Pineapple <input type="radio" id="pineapple" name="pineapple" value="pineapple">
-        </p>
-        <input type="submit" value="Submit">
+        <h2>unMeats</h2>
+        <div>
+          <input type="radio" id="garlic" name="garlic" value="garlic">
+          <label for="garlic">
+            Garlic
+          </label> 
+        </div>
+        <div>   
+          <input type="radio" id="green-bell-peppers" name="green-bell-peppers" value="green-bell-peppers">
+          <label for="green-bell-peppers">
+            Green Bell Peppers
+          </label> 
+        </div>
+        <div>
+          <input type="radio" id="jalapenos" name="jalapenos" value="jalapenos">
+          <label for="jalapenos">
+            Jalapeños
+          </label> 
+        </div>
+        <div>
+          <input type="radio" id="mushroom" name="mushroom" value="mushroom">
+          <label for="mushroom">
+            Mushroom
+          </label> 
+        </div>
+        <div>
+          <input type="radio" id="olives" name="olives" value="olives">
+          <label for="olives">
+            Olives
+          </label> 
+        </div>
+        <div>
+          <input type="radio" id="onion" name="onion" value="onion">
+          <label for="onion">
+            Onion
+          </label> 
+        </div>
+        <div>
+          <input type="radio" id="pineapple" name="pineapple" value="pineapple">
+          <label for="pineapple">
+            Pineapple
+          </label> 
+        </div>
       </form>
     </div>
-    <div id="total-cost">
-      <h3>Total cost:</h3>
-      <p>This pizza will cost you $<span id="pizza-total"></span></p>
-    </div>
+  </div>
+  <form class="pizza">
+    <input type="submit" value="Submit">
+  </form>
+  <div id="total-cost">
+    <h3>Total cost:</h3>
+    <p>This pizza will cost you $<span id="pizza-total"></span></p>
   </div>
 </body>
 </html>
