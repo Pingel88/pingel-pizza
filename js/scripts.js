@@ -5,8 +5,6 @@ function Pizza(size, toppings) {
 
 Pizza.prototype.price = function() {
   console.log("started price prototype");
-  console.log(this.toppings);
-  console.log(this.size);
   let pizzaPrice = 0;
   let toppings = this.toppings;
   if (this.size === "small") {
@@ -23,7 +21,7 @@ Pizza.prototype.price = function() {
     pizzaPrice += toppings.length;
   }
   return pizzaPrice;
-}
+};
 
 function undefinedFilter(array) {
   filteredArray = array.filter(function (element) {
@@ -43,14 +41,14 @@ $(document).ready(function() {
     const pizzaToppings = toppingsAssembler();
     const clientPizza = new Pizza(pizzaSize, pizzaToppings);
     const clientPizza2 = new Pizza(pizzaSize, pizzaToppings);
-    console.log("line 45: " + clientPizza2);
+    console.log(clientPizza2);
     console.log("line 46: " + pizzaSize);
     console.log("line 47: " + pizzaToppings);
     console.log("line 48: " + typeof(clientPizza.size));
     console.log("line 49: " + typeof(clientPizza.toppings));
     console.log("line 50: " + typeof(pizzaToppings));
     $("#total-cost").show();
-    $("#pizza-total").html(clientPizza.price);
+    $("#pizza-total").html(clientPizza.price());
   });
 });
 
