@@ -28,6 +28,18 @@ Expect: (new Pizza("large", ["pepperoni", "pineapple"]).toEqual({size: "large", 
 Test: "It should return a number based on the properties of the pizza object"
 Code: pizza1 = Pizza("small", ["olives", "sausage", "salami"])
 Expect: (pizza1.price()).toEqual(8)
+
+Test: "It should return a number based on the properties of the pizza object"
+Code: pizza2 = Pizza("medium", ["jalapenos", "tomato", "bacon", "pineapple", "ground beef", "onions"])
+Expect: (pizza2.price()).toEqual(16)
+
+Test: "It should return a number based on the properties of the pizza object"
+Code: pizza3 = Pizza("large", ["pepperoni"])
+Expect: (pizza3.price()).toEqual(16)
+
+Test: "It should return a number based on the properties of the pizza object"
+Code: pizza4 = Pizza("medium")
+Expect: (pizza4.price()).toEqual(10)
 ```
 ## Contact Information
 #### Mike Pingel
