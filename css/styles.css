@@ -1,3 +1,25 @@
 #total-cost {
   display: none;
+  flex: 1;
+  border: 1px solid black;
+}
+
+#flex-container {
+  display: flex;
+  border: 1px solid black;
+  padding: 10px;
+}
+
+#box-1 {
+  flex: 1;
+  border: 1px solid black;
+}
+
+#box-2 {
+  flex: 1;
+  border: 1px solid black;
+}
+#box-3 {
+  flex: 1;
+  border: 1px solid black;
 }
