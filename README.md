@@ -20,10 +20,14 @@
   * Navigate to the top level of the cloned directory
   * Open index.html to view the webpage
 ## Specs
-```js
+```
 Describe: Pizza()
 Test: "It should create a pizza object"
-Expect: (new Pizza("large", ["pepperoni", "pineapple"]).toEqual({size: "large", toppings: "pepperoni", "pineapple"});
+Expect: (new Pizza("large", ["pepperoni", "pineapple"]).toEqual({size: "large", toppings: "pepperoni", "pineapple"})
+
+Test: "It should return a number based on the properties of the pizza object"
+Code: pizza1 = Pizza("small", ["olives", "sausage", "salami"])
+Expect: (pizza1.price()).toEqual(8)
 ```
 ## Contact Information
 #### Mike Pingel
