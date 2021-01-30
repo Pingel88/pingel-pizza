@@ -39,19 +39,19 @@ $(document).ready(function() {
 
 function toppingsAssembler() {
   const pizzaToppings = [
-    $("input:radio[name=bacon]:checked").val(), 
-    $("input:radio[name=ground-beef]:checked").val(), 
-    $("input:radio[name=ham]:checked").val(), 
-    $("input:radio[name=italian-sausage]:checked").val(), 
-    $("input:radio[name=pepperoni]:checked").val(), 
-    $("input:radio[name=salami]:checked").val(), 
-    $("input:radio[name=garlic]:checked").val(), 
-    $("input:radio[name=green-bell-peppers]:checked").val(), 
-    $("input:radio[name=jalapenos]:checked").val(), 
-    $("input:radio[name=mushroom]:checked").val(), 
-    $("input:radio[name=olives]:checked").val(), 
-    $("input:radio[name=onion]:checked").val(), 
-    $("input:radio[name=pineapple]:checked").val(), 
+    $("input:checkbox[name=bacon]:checked").val(), 
+    $("input:checkbox[name=ground-beef]:checked").val(), 
+    $("input:checkbox[name=ham]:checked").val(), 
+    $("input:checkbox[name=italian-sausage]:checked").val(), 
+    $("input:checkbox[name=pepperoni]:checked").val(), 
+    $("input:checkbox[name=salami]:checked").val(), 
+    $("input:checkbox[name=garlic]:checked").val(), 
+    $("input:checkbox[name=green-bell-peppers]:checked").val(), 
+    $("input:checkbox[name=jalapenos]:checked").val(), 
+    $("input:checkbox[name=mushroom]:checked").val(), 
+    $("input:checkbox[name=olives]:checked").val(), 
+    $("input:checkbox[name=onion]:checked").val(), 
+    $("input:checkbox[name=pineapple]:checked").val(), 
   ];
   const filteredPizzaToppings = undefinedFilter(pizzaToppings);
   return filteredPizzaToppings;
