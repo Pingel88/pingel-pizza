@@ -19,7 +19,7 @@ html {
   background-repeat: no-repeat;
   border: 5px solid darkorange;
   border-radius: 30px;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 #heading-image {
@@ -83,7 +83,7 @@ html {
     0px 0px 30px orangered,
     0px 0px 50px orangered,
     0px 0px 80px orangered;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   cursor: pointer;
 }
 
@@ -104,15 +104,16 @@ html {
   border-radius: 20px;
   background-image: url('img/pizza-background.jpg');
   background-size: 250px;
-  margin-bottom: 10px;
   color: white;
   text-shadow:
-    0px 0px 5px orangered,
-    0px 0px 10px orangered,
-    0px 0px 20px orangered,
-    0px 0px 30px orangered,
-    0px 0px 50px orangered,
-    0px 0px 80px orangered;
+  0px 0px 5px orangered,
+  0px 0px 10px orangered,
+  0px 0px 20px orangered,
+  0px 0px 30px orangered,
+  0px 0px 50px orangered,
+  0px 0px 80px orangered;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
 }
 
 #menu-items {
@@ -142,7 +143,7 @@ html {
   width: 25%;
   margin: auto;
   color: white;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   text-align: center;
   padding: 30px;
 }
@@ -183,7 +184,8 @@ html {
     0px 0px 30px orangered,
     0px 0px 50px orangered,
     0px 0px 80px orangered;
-  padding: 20px;
+  padding: 30px;
+  margin-bottom: 20px;
 }
 
 #size {
@@ -266,4 +268,42 @@ h3 {
   display:none;
   width: 45%;
   margin: auto;
+}
+
+#submit-button {
+  border: 5px solid darkorange;
+  outline: none;
+  border-radius: 15px;
+  background-image: url('img/pizza-background.jpg');
+  background-size: 250px;
+  height: 100px;
+  width: 30%;
+  margin: auto;
+  display: block;
+  font-family: 'Permanent Marker', cursive;
+  font-size: 25px;
+  cursor: pointer;
+  color: white;
+  text-shadow:
+    0px 0px 5px orangered,
+    0px 0px 10px orangered,
+    0px 0px 20px orangered,
+    0px 0px 30px orangered,
+    0px 0px 50px orangered,
+    0px 0px 80px orangered;
+}
+
+#submit-button:hover {
+  color: white;
+  text-shadow:
+    0px 0px 5px yellow,
+    0px 0px 10px yellow,
+    0px 0px 20px yellow,
+    0px 0px 30px yellow,
+    0px 0px 50px yellow,
+    0px 0px 80px yellow;
+}
+
+#submit-button:active {
+  border: 10px solid darkorange;
 }
