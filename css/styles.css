@@ -1,6 +1,9 @@
 body {
-  padding: 50px;
-  }
+  padding: 20px;
+  background: linear-gradient(0deg, rgba(91,53,20,1) 0%, rgba(31,28,22,1) 100%) fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
 
 #total-cost {
   display: none;
@@ -8,18 +11,14 @@ body {
   border: 1px solid black;
 }
 
-#flex-container {
-  display: flex;
-  border: 1px solid black;
-  padding: 10px;
-}
-
-
 #heading {
   background-image: url('../img/pingel-pizza-banner.jpg');
   background-size: cover;
   background-repeat: no-repeat;
+  border: 5px solid rgb(255, 138, 3);
+  min-height: 300px;
 }
+
 #transparent-banner {
   vertical-align: top;
   width: 100%;
@@ -28,8 +27,8 @@ body {
 
 #heading-text {
   font-size: 30px;
-  top: 0;
   width: 100%;
+  top: 0;
   position: absolute;  
   color: rgb(206, 159, 73);
   text-shadow: 4px 4px 4px red;
@@ -44,15 +43,37 @@ body {
   font-family: 'Caveat', cursive;
 }
 
+#flex-container {
+  display: flex;
+  border: 1px solid black;
+  padding: 10px;
+}
+
 #box-1 {
+  background-color: gray;
   flex: 1;
   border: 1px solid black;
 }
+
 #box-2 {
+  background-color: gray;
   flex: 1;
   border: 1px solid black;
 }
+
 #box-3 {
+  background-color: gray;
   flex: 1;
   border: 1px solid black;
+}
+
+h2 {
+  font-family: 'Permanent Marker', cursive;
+  text-align: center;
+}
+
+.radio-buttons {
+  border: 3px solid red;
+  margin: auto;
+  width: 75%;
 }
