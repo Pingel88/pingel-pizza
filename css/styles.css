@@ -1,8 +1,10 @@
-body {
-  padding: 20px;
-  background: linear-gradient(0deg, rgba(91,53,20,1) 0%, rgba(31,28,22,1) 100%) fixed;
-  background-size: cover;
+html {
+  padding: 10px;
+  background-color: #7f5a83;
+  background-color: #802201;
+  background-image: linear-gradient(326deg, #802201 0%, #210d10 74%);
   background-repeat: no-repeat;
+  height: 100%;
 }
 
 #total-cost {
@@ -12,41 +14,43 @@ body {
 }
 
 #heading {
-  background-image: url('../img/pingel-pizza-banner.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  border: 5px solid rgb(255, 138, 3);
-  min-height: 300px;
+  border: 5px solid darkorange;
 }
 
-#transparent-banner {
+#heading-image {
   vertical-align: top;
   width: 100%;
-  opacity: 0;
+  min-height: 300px;
+  min-width: 500px;
 }
 
 #heading-text {
-  font-size: 30px;
-  width: 100%;
-  top: 0;
   position: absolute;  
-  color: rgb(206, 159, 73);
-  text-shadow: 4px 4px 4px red;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  width: 75%;
+  min-width: 500px;
+  font-size: 30px;
   text-align: center;
+  color: darkorange;
 }
 
 #heading-text > h1 {
   font-family: 'Permanent Marker', cursive;
+  text-shadow: 5px 5px 4px orangered;
 }
 
 #heading-text > p {
   font-family: 'Caveat', cursive;
+  text-shadow: 3px 3px 4px orangered;
 }
 
 #flex-container {
   display: flex;
-  border: 1px solid black;
-  padding: 10px;
+  border: 5px solid darkorange;
 }
 
 #box-1 {

@@ -4,7 +4,7 @@
 ## Technologies Used
 * _HTML_
 * _CSS_
-* _Bootstrap_
+* _Google Fonts_
 * _Javascript_
 * _jQuery_
 * _GitHub_
