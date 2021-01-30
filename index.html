@@ -19,6 +19,22 @@
   <div id="build-pizza">
     <h2>Let's build some 'za!</h2>
   </div>
+  <div id="pizza-menu">
+    <div id="menu-items">
+      <div id="menu-size">
+        <h3>Sizes:</h3>
+        <p>Small - 8"</p>
+        <p>Medium - 12"</p>
+        <p>Large - 16"</p>
+      </div>
+      <div id="menu-toppings">
+        <h3>Toppings:</h3>
+        <p>Small - $1.00 per topping</p>
+        <p>Medium - $1.50 per topping</p>
+        <p>Large - $2.00 per topping</p>
+      </div>    
+    </div>
+  </div>
   <div id="main-interface">
     <div id="pizza-name">
       <form class="pizza">
@@ -30,7 +46,7 @@
     <div id="pizza-options">
       <div id="size">
         <form class="pizza">
-          <h3 id="size-header">Size</h3>
+          <h3 id="size-header" class="pizza-headers">Size</h3>
           <div id="radio-buttons-size">
             <input type="radio" id="small" name="pizza-size" value="small">
             <label for="small">
@@ -51,7 +67,7 @@
       </div>
       <div id="sauce">
         <form class="pizza">
-          <h3 id="sauce-header">Sauce</h3>
+          <h3 id="sauce-header" class="pizza-headers">Sauce</h3>
           <div id="radio-buttons-sauce">
             <input type="radio" id="tomato" name="pizza-sauce" value="tomato">
             <label for="tomato">
@@ -77,7 +93,7 @@
       </div>
       <div id="cheese">
         <form class="pizza">
-          <h3 id="cheese-header">Cheese</h3>
+          <h3 id="cheese-header" class="pizza-headers">Cheese</h3>
           <div id="radio-buttons-cheese">
             <input type="radio" id="mozzarella" name="pizza-cheese" value="mozzarella">
             <label for="mozzarella">
@@ -98,7 +114,7 @@
       </div>
       <div id="meats">
         <form class="pizza">
-          <h3 id="meats-header">Meats</h3>
+          <h3 id="meats-header" class="pizza-headers">Meats</h3>
           <div id="radio-buttons-meats">
             <input type="checkbox" id="bacon" name="bacon" value="bacon">
             <label for="bacon">
@@ -134,7 +150,7 @@
       </div>
       <div id="unmeats"">
         <form class="pizza">
-          <h3 id="unmeats-header">unMeats</h3>
+          <h3 id="unmeats-header" class="pizza-headers">unMeats</h3>
           <div id="radio-buttons-unmeats">
             <input type="checkbox" id="garlic" name="garlic" value="garlic">
             <label for="garlic">

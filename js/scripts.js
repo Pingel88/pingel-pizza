@@ -28,7 +28,10 @@ function undefinedFilter(array) {
 
 $(document).ready(function() {
   $("#build-pizza").click(function() {
+    $("#heading-text").hide();
+    $('#heading').slideUp();
     $("#build-pizza").slideUp();
+    $("#pizza-menu").slideDown();
     $("#main-interface").slideDown();
   });
   $("#size-header").click(function() {

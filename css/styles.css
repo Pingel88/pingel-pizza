@@ -44,8 +44,9 @@ html {
   color: white;
 }
 
-#heading-text > h1 {
+#heading-text h1 {
   font-family: 'Permanent Marker', cursive;
+  color: white;
   text-shadow:
     0px 0px 10px orangered,
     0px 0px 30px orangered,
@@ -55,7 +56,7 @@ html {
     0px 0px 150px orangered;
 }
 
-#heading-text > p {
+#heading-text p {
   font-family: 'Caveat', cursive;
   text-shadow:
     0px 0px 5px orangered,
@@ -97,6 +98,38 @@ html {
     0px 0px 80px yellow;
 }
 
+#pizza-menu {
+  display: none;
+  border: 5px solid darkorange;
+  border-radius: 20px;
+  background-image: url('img/pizza-background.jpg');
+  background-size: 250px;
+  margin-bottom: 10px;
+  color: white;
+  text-shadow:
+    0px 0px 5px orangered,
+    0px 0px 10px orangered,
+    0px 0px 20px orangered,
+    0px 0px 30px orangered,
+    0px 0px 50px orangered,
+    0px 0px 80px orangered;
+}
+
+#menu-items {
+  display: flex;
+  text-align: center;
+  font-family: 'Caveat', cursive;
+  font-size: 20px;
+}
+
+#menu-size {
+  flex: 1;
+}
+
+#menu-toppings {
+  flex: 1;
+}
+
 #main-interface {
   display: none;
 }
@@ -134,13 +167,14 @@ html {
   margin: auto;
 }
 
-
 #pizza-options {
   background-image: url('img/pizza-background.jpg');
   background-size: 250px;
   display: flex;
   border: 5px solid darkorange;
   border-radius: 20px;
+  font-family: 'Caveat', cursive;
+  font-size: 20px;
   color: white;
   text-shadow:
     0px 0px 5px orangered,
@@ -193,7 +227,7 @@ h3 {
     0px 0px 80px orangered;
 }
 
-h3:hover {
+.pizza-headers:hover {
   color: white;
   text-shadow:
     0px 0px 5px yellow,
@@ -206,29 +240,30 @@ h3:hover {
 
 #radio-buttons-size {
   display: none;
-  width: 50%;
+  width: 30%;
   margin: auto;
 }
 
 #radio-buttons-sauce {
   display: none;
-  width: 60%;
+  width: 30%;
   margin: auto;
 }
 
 #radio-buttons-cheese {
   display: none;
-  width: 85%;
+  width: 45%;
   margin: auto;
 }
 
 #radio-buttons-meats {
   display:none;
+  width: 50%;
   margin: auto;
 }
 
 #radio-buttons-unmeats {
   display:none;
-  width: 80%;
+  width: 45%;
   margin: auto;
 }
