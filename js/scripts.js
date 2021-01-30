@@ -27,6 +27,10 @@ function undefinedFilter(array) {
 };
 
 $(document).ready(function() {
+  $("#build-pizza").click(function() {
+    $("#build-pizza").slideUp();
+    $("#main-interface").slideDown();
+  });
   $("form.pizza").submit(function(event) {
     event.preventDefault();
     const pizzaSize = $("input:radio[name=pizza-size]:checked").val();
