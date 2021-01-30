@@ -31,6 +31,21 @@ $(document).ready(function() {
     $("#build-pizza").slideUp();
     $("#main-interface").slideDown();
   });
+  $("#size-header").click(function() {
+    $("#radio-buttons-size").slideToggle();
+  });
+  $("#sauce-header").click(function() {
+    $("#radio-buttons-sauce").slideToggle();
+  });
+  $("#cheese-header").click(function() {
+    $("#radio-buttons-cheese").slideToggle();
+  });
+  $("#meats-header").click(function() {
+    $("#radio-buttons-meats").slideToggle();
+  });
+  $("#unmeats-header").click(function() {
+    $("#radio-buttons-unmeats").slideToggle();
+  });
   $("form.pizza").submit(function(event) {
     event.preventDefault();
     const pizzaSize = $("input:radio[name=pizza-size]:checked").val();
