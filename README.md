@@ -46,6 +46,10 @@ Describe: undefinedFilter()
 Test: "It should return an array without any undefined elements"
 Code: const three = 3; const uglyArray = ["one", 2, three, undefined, 5, undefined, "six"]
 Expect: (undefinedFilter(uglyArray)).toEqual(["one", 2, 3, 5, "six"])
+
+Describe: splitHyphen()
+Test: "It should return a string with a space replacing the hyphen used in multi-word element IDs and classes as well as capitalizing the first letter of each word"
+Expect: splitHyphen("red-bell-peppers").toEqual("Red Bell Peppers")
 ```
 ## Contact Information
 #### Mike Pingel
