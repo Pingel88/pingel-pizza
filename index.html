@@ -40,7 +40,9 @@
       <form class="pizza">
         <label for="pizza-name-field" id="pizza-name-text">Name your creation</label>
         <br>
-        <input type="text" id="pizza-name-field">
+        <div id="name-update">  
+          <input type="text" id="pizza-name-field" value="Pizza 1">
+        </div>
       </form>
     </div>
     <div id="pizza-options">
@@ -69,126 +71,126 @@
         <form class="pizza">
           <h3 id="sauce-header" class="pizza-headers">Sauce</h3>
           <div id="radio-buttons-sauce">
-            <input type="radio" id="tomato" name="pizza-sauce" value="tomato">
-            <label for="tomato">
-              Tomato
-            </label>
-            <br>
-            <input type="radio" id="garlic-sauce" name="pizza-sauce" value="garlic">
-            <label for="garlic-sauce">
-              Garlic
-            </label>
-            <br>
-            <input type="radio" id="alfredo" name="pizza-sauce" value="alfredo">
-            <label for="alfredo">
-              Alfredo
-            </label>
-            <br>
-            <input type="radio" id="mayonnaise" name="pizza-sauce" value="mayonnaise">
-            <label for="mayonnaise">
-              Mayonnaise
-            </label>
-          </div>
-        </form>
-      </div>
-      <div id="cheese">
-        <form class="pizza">
-          <h3 id="cheese-header" class="pizza-headers">Cheese</h3>
-          <div id="radio-buttons-cheese">
-            <input type="radio" id="mozzarella" name="pizza-cheese" value="mozzarella">
-            <label for="mozzarella">
-              Mozzarella
-            </label>
-            <br>
-            <input type="radio" id="cashew-mozzarella" name="pizza-cheese" value="cashew-mozzarella">
-            <label for="cashew-mozzarella">
-              Cashew Mozzarella
-            </label>
-            <br>
-            <input type="radio" id="no-cheese" name="pizza-cheese" value="no-cheese">
-            <label for="no-cheese">
-              No Cheese
-            </label>
-          </div>
-        </form>
-      </div>
-      <div id="meats">
-        <form class="pizza">
-          <h3 id="meats-header" class="pizza-headers">Meats</h3>
-          <div id="radio-buttons-meats">
-            <input type="checkbox" id="bacon" name="bacon" value="bacon">
-            <label for="bacon">
-              Bacon
-            </label>
-            <br>
-            <input type="checkbox" id="ground-beef" name="ground-beef" value="ground-beef">
-            <label for="ground-beef">
-              Ground Beef
-            </label>
-            <br>
-            <input type="checkbox" id="ham" name="ham" value="ham">
-            <label for="ham">
-              Ham (Canadian Bacon)
-            </label>
-            <br>
-            <input type="checkbox" id="italian-sausage" name="italian-sausage" value="italian-sausage">
-            <label for="italian-sausage">
-              Italian Sausage
-            </label>
-            <br>
-            <input type="checkbox" id="pepperoni" name="pepperoni" value="pepperoni">
-            <label for="pepperoni">
-              Pepperoni
-            </label>
-            <br>
-            <input type="checkbox" id="salami" name="salami" value="salami">
-            <label for="salami">
-              Salami
-            </label>
-          </div>
-        </form>
-      </div>
-      <div id="unmeats"">
-        <form class="pizza">
-          <h3 id="unmeats-header" class="pizza-headers">unMeats</h3>
-          <div id="radio-buttons-unmeats">
-            <input type="checkbox" id="garlic" name="garlic" value="garlic">
-            <label for="garlic">
-              Garlic
-            </label> 
-            <br>
-            <input type="checkbox" id="green-bell-peppers" name="green-bell-peppers" value="green-bell-peppers">
-            <label for="green-bell-peppers">
-              Green Bell Peppers
-            </label> 
-            <br>
-            <input type="checkbox" id="jalapenos" name="jalapenos" value="jalapenos">
-            <label for="jalapenos">
-              Jalapeños
-            </label> 
-            <br>
-            <input type="checkbox" id="mushroom" name="mushroom" value="mushroom">
-            <label for="mushroom">
-              Mushroom
-            </label> 
-            <br>
-            <input type="checkbox" id="olives" name="olives" value="olives">
-            <label for="olives">
-              Olives
-            </label> 
-            <br>
-            <input type="checkbox" id="onion" name="onion" value="onion">
-            <label for="onion">
-              Onion
-            </label> 
-            <br>
-            <input type="checkbox" id="pineapple" name="pineapple" value="pineapple">
-            <label for="pineapple">
-              Pineapple
-            </label> 
-          </div>
-        </form>
-      </div>
+          <input type="radio" id="tomato" name="pizza-sauce" value="tomato">
+          <label for="tomato">
+            Tomato
+          </label>
+          <br>
+          <input type="radio" id="garlic-sauce" name="pizza-sauce" value="garlic">
+          <label for="garlic-sauce">
+            Garlic
+          </label>
+          <br>
+          <input type="radio" id="alfredo" name="pizza-sauce" value="alfredo">
+          <label for="alfredo">
+            Alfredo
+          </label>
+          <br>
+          <input type="radio" id="mayonnaise" name="pizza-sauce" value="mayonnaise">
+          <label for="mayonnaise">
+            Mayonnaise
+          </label>
+        </div>
+      </form>
+    </div>
+    <div id="cheese">
+      <form class="pizza">
+        <h3 id="cheese-header" class="pizza-headers">Cheese</h3>
+        <div id="radio-buttons-cheese">
+          <input type="radio" id="mozzarella" name="pizza-cheese" value="mozzarella">
+          <label for="mozzarella">
+            Mozzarella
+          </label>
+          <br>
+          <input type="radio" id="cashew-mozzarella" name="pizza-cheese" value="cashew-mozzarella">
+          <label for="cashew-mozzarella">
+            Cashew Mozzarella
+          </label>
+          <br>
+          <input type="radio" id="no-cheese" name="pizza-cheese" value="no-cheese">
+          <label for="no-cheese">
+            No Cheese
+          </label>
+        </div>
+      </form>
+    </div>
+    <div id="meats">
+      <form class="pizza">
+        <h3 id="meats-header" class="pizza-headers">Meats</h3>
+        <div id="radio-buttons-meats">
+          <input type="checkbox" id="bacon" name="bacon" value="bacon">
+          <label for="bacon">
+            Bacon
+          </label>
+          <br>
+          <input type="checkbox" id="ground-beef" name="ground-beef" value="ground-beef">
+          <label for="ground-beef">
+            Ground Beef
+          </label>
+          <br>
+          <input type="checkbox" id="ham" name="ham" value="ham">
+          <label for="ham">
+            Ham (Canadian Bacon)
+          </label>
+          <br>
+          <input type="checkbox" id="italian-sausage" name="italian-sausage" value="italian-sausage">
+          <label for="italian-sausage">
+            Italian Sausage
+          </label>
+          <br>
+          <input type="checkbox" id="pepperoni" name="pepperoni" value="pepperoni">
+          <label for="pepperoni">
+            Pepperoni
+          </label>
+          <br>
+          <input type="checkbox" id="salami" name="salami" value="salami">
+          <label for="salami">
+            Salami
+          </label>
+        </div>
+      </form>
+    </div>
+    <div id="unmeats"">
+      <form class="pizza">
+        <h3 id="unmeats-header" class="pizza-headers">unMeats</h3>
+        <div id="radio-buttons-unmeats">
+          <input type="checkbox" id="garlic" name="garlic" value="garlic">
+          <label for="garlic">
+            Garlic
+          </label> 
+          <br>
+          <input type="checkbox" id="green-bell-peppers" name="green-bell-peppers" value="green-bell-peppers">
+          <label for="green-bell-peppers">
+            Green Bell Peppers
+          </label> 
+          <br>
+          <input type="checkbox" id="jalapenos" name="jalapenos" value="jalapenos">
+          <label for="jalapenos">
+            Jalapeños
+          </label> 
+          <br>
+          <input type="checkbox" id="mushroom" name="mushroom" value="mushroom">
+          <label for="mushroom">
+            Mushroom
+          </label> 
+          <br>
+          <input type="checkbox" id="olives" name="olives" value="olives">
+          <label for="olives">
+            Olives
+          </label> 
+          <br>
+          <input type="checkbox" id="onion" name="onion" value="onion">
+          <label for="onion">
+            Onion
+          </label> 
+          <br>
+          <input type="checkbox" id="pineapple" name="pineapple" value="pineapple">
+          <label for="pineapple">
+            Pineapple
+          </label> 
+        </div>
+      </form>
+    </div>
     </div>
     <form class="pizza">
       <input type="submit" value="Add to Cart" id="submit-button">

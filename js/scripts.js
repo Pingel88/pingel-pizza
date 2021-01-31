@@ -42,8 +42,8 @@ Pizza.prototype.updateCartTotal = function(cartTotal) {
 Pizza.prototype.addToCart = function() {
   const name = this.name;
   const idName = name.split(" ").join("");
-  $('#pizzas').append("<h5 id='pizza-name-in-cart-" + idName + "'>" + this.name + " - $" + this.price + "</h5>");
-  $('#pizzas').append("<p id='pizza-in-cart-" + idName + "'><span class='pizza-key'>Size: </span>" + this.size + "</br><span class='pizza-key'>Sauce: </span>" + this.sauce + "<br><span class='pizza-key'>Cheese: </span>" + this.cheese + "<br><span class='pizza-key'>Toppings: </span>" + this.toppings + "</p>");
+  $("#pizzas").append("<h5 id='pizza-name-in-cart-" + idName + "'>" + this.name + " - $" + this.price + "</h5>");
+  $("#pizzas").append("<p id='pizza-in-cart-" + idName + "'><span class='pizza-key'>Size: </span>" + this.size + "</br><span class='pizza-key'>Sauce: </span>" + this.sauce + "<br><span class='pizza-key'>Cheese: </span>" + this.cheese + "<br><span class='pizza-key'>Toppings: </span>" + this.toppings + "</p>");
 };
 
 Pizza.prototype.attachListeners = function() {
@@ -58,7 +58,11 @@ Pizza.prototype.attachListeners = function() {
 };
 
 $(document).ready(function() {
+  $("#small").prop('checked', true);
+  $("#tomato").prop('checked', true);
+  $("#mozzarella").prop('checked', true);
   let cart = 0;
+  let iteration = 2;
 
   $("#build-pizza").click(function() {
     $("#heading-text").hide();
@@ -105,8 +109,10 @@ $(document).ready(function() {
     updateCartTotal(newCartTotal);
     cart = newCartTotal;
     console.log(cart);
+    uncheckToppings();
+    $("#name-update").html("<input type='text' id='pizza-name-field' value='Pizza " + iteration + "'>");
+    iteration ++;
   });
-
 });
 
 function toppingsAssembler() {
@@ -132,4 +138,20 @@ function toppingsAssembler() {
 function updateCartTotal(newCartTotal) {
   console.log("this should update the text with" + newCartTotal);
   $("#cart-total").text(newCartTotal);
+};
+
+function uncheckToppings() {
+  $("#bacon").prop('checked', false);
+  $("#ground-beef").prop('checked', false);
+  $("#ham").prop('checked', false);
+  $("#italian-sausage").prop('checked', false);
+  $("#pepperoni").prop('checked', false);
+  $("#salami").prop('checked', false);
+  $("#garlic").prop('checked', false);
+  $("#green-bell-peppers").prop('checked', false);
+  $("#jalapenos").prop('checked', false);
+  $("#mushroom").prop('checked', false);
+  $("#olives").prop('checked', false);
+  $("#onion").prop('checked', false);
+  $("#pineapple").prop('checked', false);
 };
