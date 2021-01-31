@@ -10,7 +10,7 @@ function Pizza(name, size, sauce, cheese, toppings) {
 };
 
 function undefinedFilter(array) {
-  filteredArray = array.filter(function (element) {
+  const filteredArray = array.filter(function (element) {
     return element != null;
   });
   return filteredArray;
@@ -18,7 +18,7 @@ function undefinedFilter(array) {
 
 function splitHyphen(string) {
   const stringArray = string.split("-");
-  stringArrayCapitalized = stringArray.map(function(element) {
+  const stringArrayCapitalized = stringArray.map(function(element) {
     return element.charAt(0).toUpperCase() + element.slice(1);
   });
   return stringArrayCapitalized.join(" ");
@@ -138,7 +138,7 @@ $(document).ready(function() {
     clientPizza.attachListeners();
     $("#cart-total").text(newCartTotal);
     uncheckToppings();
-    $("#name-update").html("<input type='text' id='pizza-name-field' value='Pizza " + iteration + "'>");
+    $("#name-update").html("<input type='text' id='pizza-name-field' value='Pizza " + iteration + "' autocomplete='off'>");
     cart = newCartTotal;
     pizzaId ++;
     iteration ++;
