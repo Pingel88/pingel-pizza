@@ -1,9 +1,13 @@
 html {
   padding: 10px;
-  background-color: #7f5a83;
-  background-color: #802201;
-  background-image: linear-gradient(326deg, #802201 0%, #210d10 74%);
-  background-repeat: no-repeat;
+  /* background-image: url('img/background-mirrored.jpg'); */
+  background-image: url('img/pizza-background.jpg');
+  /* background-size: 750px; */
+  background-size: 500px;
+  /* background-color: #7f5a83;
+  background-color: #802201; */
+  /* background-image: linear-gradient(326deg, #802201 0%, #210d10 74%); */
+  /* background-repeat: no-repeat; */
   height: 100%;
 }
 
@@ -70,8 +74,11 @@ html {
 #build-pizza {
   border: 5px solid darkorange;
   border-radius: 20px;
-  background-image: url('img/pizza-background.jpg');
-  background-size: 250px;
+  /* background-image: url('img/pizza-background.jpg'); */
+  /* background-size: 250px; */
+  background-image: url('img/background-mirrored.jpg');
+  background-size: 750px;
+  background-attachment: fixed;
   width: 50%;
   min-width: 650px;
   margin: auto;
@@ -104,8 +111,11 @@ html {
   border-radius: 20px;
   width: 90%;
   margin: auto;
-  background-image: url('img/pizza-background.jpg');
-  background-size: 250px;
+  /* background-image: url('img/pizza-background.jpg');
+  background-size: 250px; */
+  background-image: url('img/background-mirrored.jpg');
+  background-size: 750px;
+  background-attachment: fixed;
   color: white;
   text-shadow:
   0px 0px 5px orangered,
@@ -139,8 +149,11 @@ html {
 
 #pizza-name {
   border: 5px solid darkorange;
-  background-image: url('img/pizza-background.jpg');
-  background-size: 250px;
+  /* background-image: url('img/pizza-background.jpg');
+  background-size: 250px; */
+  background-image: url('img/background-mirrored.jpg');
+  background-size: 750px;
+  background-attachment: fixed;
   border-radius: 15px;
   width: 50%;
   margin: auto;
@@ -171,8 +184,11 @@ html {
 }
 
 #pizza-options {
-  background-image: url('img/pizza-background.jpg');
-  background-size: 250px;
+  /* background-image: url('img/pizza-background.jpg');
+  background-size: 250px; */
+  background-image: url('img/background-mirrored.jpg');
+  background-size: 750px;
+  background-attachment: fixed;
   display: flex;
   border: 5px solid darkorange;
   border-radius: 20px;
@@ -279,8 +295,11 @@ h3 {
   border: 2.5px solid darkorange;
   outline: none;
   border-radius: 5px;
-  background-image: url('img/pizza-background.jpg');
-  background-size: 250px;
+  /* background-image: url('img/pizza-background.jpg');
+  background-size: 250px; */
+  background-image: url('img/background-mirrored.jpg');
+  background-size: 750px;
+  background-attachment: fixed;
   height: 75px;
   width: 300px;
   margin: auto;
@@ -317,27 +336,72 @@ h3 {
 
 #cart {
   display: none;
-  background-image: url('img/pizza-background.jpg');
-  background-size: 250px;
+  /* background-image: url('img/pizza-background.jpg');
+  background-size: 250px; */
+  background-image: url('img/background-mirrored.jpg');
+  background-size: 750px;
+  background-attachment: fixed;
   border: 5px solid darkorange;
   border-radius: 20px;
   width: 75%;
   margin: auto;
-  font-family: 'Caveat', cursive;
   font-size: 30px;
   text-align: center;
   color: white;
-  text-shadow:
-    0px 0px 5px orangered,
-    0px 0px 10px orangered,
-    0px 0px 20px orangered,
-    0px 0px 30px orangered,
-    0px 0px 50px orangered,
-    0px 0px 80px orangered;
   padding: 30px;
   margin-bottom: 20px;
 }
+#cart h3 {
+  text-shadow:
+  0px 0px 5px orangered,
+  0px 0px 10px orangered,
+  0px 0px 20px orangered,
+  0px 0px 30px orangered,
+  0px 0px 50px orangered,
+  0px 0px 80px orangered;
+}
 
+#cart h4{ 
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 #cart p {
   font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h5 {
+  font-family: 'Caveat', cursive;
+  font-size: 40px;
+  width: 40%;
+  margin: auto; 
+  text-shadow:
+  0px 0px 5px orangered,
+  0px 0px 10px orangered,
+  0px 0px 20px orangered,
+  0px 0px 30px orangered,
+  0px 0px 50px orangered,
+  0px 0px 80px orangered;
+  cursor: pointer;
+}
+
+h5:hover {
+  color: white;
+  text-shadow:
+    0px 0px 5px yellow,
+    0px 0px 10px yellow,
+    0px 0px 20px yellow,
+    0px 0px 30px yellow,
+    0px 0px 50px yellow,
+    0px 0px 80px yellow;
+}
+
+#pizzas p {
+  width: 50%;
+  margin: auto;
+  display: none;
+  font-size: 20px;
+}
+
+.pizza-key {
+  font-size: 25px;
+  font-weight: bolder;
 }
