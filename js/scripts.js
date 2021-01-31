@@ -46,10 +46,6 @@ Pizza.prototype.addPrice = function() {
   }
 };
 
-Pizza.prototype.applyId = function(pizzaId) {
-  this.pizzaId = pizzaId;
-};
-
 Pizza.prototype.capitalizeToppings = function() {
   const toppingsArrayCapitalized = [];
   const toppings = this.toppings;
@@ -141,7 +137,7 @@ $(document).ready(function() {
     const clientPizza = new Pizza(pizzaName, pizzaSize, pizzaSauce, pizzaCheese, pizzaToppings);
     $("#cart").slideDown();
     clientPizza.addPrice();
-    clientPizza.applyId(pizzaId);
+    clientPizza.pizzaId = pizzaId;
     clientPizza.addToCart();
     newCartTotal = clientPizza.updateCartTotal(cart);
     clientPizza.attachListeners();
