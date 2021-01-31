@@ -40,21 +40,19 @@ Pizza.prototype.updateCartTotal = function(cartTotal) {
 };
 
 Pizza.prototype.addToCart = function() {
-  const name = this.name;
-  const idName = name.split(" ").join("");
-  $("#pizzas").append("<h5 id='pizza-name-in-cart-" + idName + "'>" + this.name + " - $" + this.price + "</h5>");
-  $("#pizzas").append("<p id='pizza-in-cart-" + idName + "'><span class='pizza-key'>Size: </span>" + this.size + "</br><span class='pizza-key'>Sauce: </span>" + this.sauce + "<br><span class='pizza-key'>Cheese: </span>" + this.cheese + "<br><span class='pizza-key'>Toppings: </span>" + this.toppings + "</p>");
+  $("#pizzas").append("<h5 id='pizza-name-in-cart-" + this.pizzaId + "'>" + this.name + " - $" + this.price + "</h5>");
+  $("#pizzas").append("<p id='pizza-in-cart-" + this.pizzaId + "'><span class='pizza-key'>Size: </span>" + this.size + "</br><span class='pizza-key'>Sauce: </span>" + this.sauce + "<br><span class='pizza-key'>Cheese: </span>" + this.cheese + "<br><span class='pizza-key'>Toppings: </span>" + this.toppings + "</p>");
 };
 
 Pizza.prototype.attachListeners = function() {
-  const name = this.name;
-  const idName = name.split(" ").join("");
-  const headerId = "#pizza-name-in-cart-" + idName;
-  const paragraphId = "#pizza-in-cart-" + idName;
-  $("#pizzas").on("click", headerId, function() {
-    console.log(name);
-    $(paragraphId).slideToggle();
+  const pizzaId = this.pizzaId;
+  $("#pizzas").on("click", "#pizza-name-in-cart-" + pizzaId, function() {
+    $("#pizza-in-cart-" + pizzaId).slideToggle();
   });
+};
+
+Pizza.prototype.applyId = function(pizzaId) {
+  this.pizzaId = pizzaId;
 };
 
 $(document).ready(function() {
@@ -63,6 +61,7 @@ $(document).ready(function() {
   $("#mozzarella").prop('checked', true);
   let cart = 0;
   let iteration = 2;
+  let pizzaId = 0;
 
   $("#build-pizza").click(function() {
     $("#heading-text").hide();
@@ -103,14 +102,15 @@ $(document).ready(function() {
     const clientPizza = new Pizza(pizzaName, pizzaSize, pizzaSauce, pizzaCheese, pizzaToppings);
     $("#cart").slideDown();
     clientPizza.addPrice();
+    clientPizza.applyId(pizzaId);
     clientPizza.addToCart();
     newCartTotal = clientPizza.updateCartTotal(cart);
     clientPizza.attachListeners();
     updateCartTotal(newCartTotal);
     cart = newCartTotal;
-    console.log(cart);
     uncheckToppings();
     $("#name-update").html("<input type='text' id='pizza-name-field' value='Pizza " + iteration + "'>");
+    pizzaId ++;
     iteration ++;
   });
 });
