@@ -1,13 +1,7 @@
 html {
   padding: 10px;
-  /* background-image: url('img/background-mirrored.jpg'); */
-  background-image: url('img/pizza-background.jpg');
-  /* background-size: 750px; */
-  background-size: 500px;
-  /* background-color: #7f5a83;
-  background-color: #802201; */
-  /* background-image: linear-gradient(326deg, #802201 0%, #210d10 74%); */
-  /* background-repeat: no-repeat; */
+  background-color: #2e0000;
+  background-attachment: fixed;
   height: 100%;
 }
 
@@ -74,9 +68,7 @@ html {
 #build-pizza {
   border: 5px solid darkorange;
   border-radius: 20px;
-  /* background-image: url('img/pizza-background.jpg'); */
-  /* background-size: 250px; */
-  background-image: url('img/background-mirrored.jpg');
+  background-image: url('img/pizza-background.jpg');
   background-size: 750px;
   background-attachment: fixed;
   width: 50%;
@@ -111,9 +103,7 @@ html {
   border-radius: 20px;
   width: 90%;
   margin: auto;
-  /* background-image: url('img/pizza-background.jpg');
-  background-size: 250px; */
-  background-image: url('img/background-mirrored.jpg');
+  background-image: url('img/pizza-background.jpg');
   background-size: 750px;
   background-attachment: fixed;
   color: white;
@@ -132,7 +122,7 @@ html {
   display: flex;
   text-align: center;
   font-family: 'Caveat', cursive;
-  font-size: 20px;
+  font-size: 30px;
 }
 
 #menu-size {
@@ -149,9 +139,7 @@ html {
 
 #pizza-name {
   border: 5px solid darkorange;
-  /* background-image: url('img/pizza-background.jpg');
-  background-size: 250px; */
-  background-image: url('img/background-mirrored.jpg');
+  background-image: url('img/pizza-background.jpg');
   background-size: 750px;
   background-attachment: fixed;
   border-radius: 15px;
@@ -184,16 +172,14 @@ html {
 }
 
 #pizza-options {
-  /* background-image: url('img/pizza-background.jpg');
-  background-size: 250px; */
-  background-image: url('img/background-mirrored.jpg');
+  background-image: url('img/pizza-background.jpg');
   background-size: 750px;
   background-attachment: fixed;
   display: flex;
   border: 5px solid darkorange;
   border-radius: 20px;
   font-family: 'Caveat', cursive;
-  font-size: 20px;
+  font-size: 25px;
   color: white;
   text-shadow:
     0px 0px 5px orangered,
@@ -263,31 +249,31 @@ h3 {
 
 #radio-buttons-size {
   display: none;
-  width: 30%;
+  width: 50%;
   margin: auto;
 }
 
 #radio-buttons-sauce {
   display: none;
-  width: 30%;
+  width: 50%;
   margin: auto;
 }
 
 #radio-buttons-cheese {
   display: none;
-  width: 45%;
+  width: 65%;
   margin: auto;
 }
 
 #radio-buttons-meats {
   display:none;
-  width: 50%;
+  width: 70%;
   margin: auto;
 }
 
 #radio-buttons-unmeats {
   display:none;
-  width: 45%;
+  width: 65%;
   margin: auto;
 }
 
@@ -295,9 +281,7 @@ h3 {
   border: 2.5px solid darkorange;
   outline: none;
   border-radius: 5px;
-  /* background-image: url('img/pizza-background.jpg');
-  background-size: 250px; */
-  background-image: url('img/background-mirrored.jpg');
+  background-image: url('img/pizza-background.jpg');
   background-size: 750px;
   background-attachment: fixed;
   height: 75px;
@@ -336,9 +320,7 @@ h3 {
 
 #cart {
   display: none;
-  /* background-image: url('img/pizza-background.jpg');
-  background-size: 250px; */
-  background-image: url('img/background-mirrored.jpg');
+  background-image: url('img/pizza-background.jpg');
   background-size: 750px;
   background-attachment: fixed;
   border: 5px solid darkorange;

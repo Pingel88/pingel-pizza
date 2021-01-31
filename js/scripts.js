@@ -1,3 +1,5 @@
+// Business Logic ---------------------
+
 function Pizza(name, size, sauce, cheese, toppings) {
   this.name = name;
   this.price = 0;
@@ -6,6 +8,23 @@ function Pizza(name, size, sauce, cheese, toppings) {
   this.cheese = cheese;
   this.toppings = toppings;
 };
+
+function undefinedFilter(array) {
+  filteredArray = array.filter(function (element) {
+    return element != null;
+  });
+  return filteredArray;
+};
+
+function splitHyphen(string) {
+  const stringArray = string.split("-");
+  stringArrayCapitalized = stringArray.map(function(element) {
+    return element.charAt(0).toUpperCase() + element.slice(1);
+  });
+  return stringArrayCapitalized.join(" ");
+};
+
+// Business Logic Pizza Prototypes -------------------------
 
 Pizza.prototype.addPrice = function() {
   let toppings = this.toppings;
@@ -27,11 +46,28 @@ Pizza.prototype.addPrice = function() {
   }
 };
 
-function undefinedFilter(array) {
-  filteredArray = array.filter(function (element) {
-    return element != null;
-  });
-  return filteredArray;
+Pizza.prototype.applyId = function(pizzaId) {
+  this.pizzaId = pizzaId;
+};
+
+Pizza.prototype.capitalizeToppings = function() {
+  const toppingsArrayCapitalized = [];
+  const toppings = this.toppings;
+  console.log(typeof(toppings));
+  if (toppings.length > 0) {
+    toppings.map(function (element) {
+      console.log(element);
+      if (element.includes("-")) {
+        toppingsArrayCapitalized.push(splitHyphen(element));
+      } else {
+        elementCapitalized = element.charAt(0).toUpperCase() + element.slice(1);
+        toppingsArrayCapitalized.push(elementCapitalized);
+      }
+    });
+  } else {
+    toppingsArrayCapitalized.push("No Toppings");
+  }
+  return toppingsArrayCapitalized.join(", ");
 };
 
 Pizza.prototype.updateCartTotal = function(cartTotal) {
@@ -39,10 +75,7 @@ Pizza.prototype.updateCartTotal = function(cartTotal) {
   return newCartTotal;
 };
 
-Pizza.prototype.addToCart = function() {
-  $("#pizzas").append("<h5 id='pizza-name-in-cart-" + this.pizzaId + "'>" + this.name + " - $" + this.price + "</h5>");
-  $("#pizzas").append("<p id='pizza-in-cart-" + this.pizzaId + "'><span class='pizza-key'>Size: </span>" + this.size + "</br><span class='pizza-key'>Sauce: </span>" + this.sauce + "<br><span class='pizza-key'>Cheese: </span>" + this.cheese + "<br><span class='pizza-key'>Toppings: </span>" + this.toppings + "</p>");
-};
+// UI Logic Pizza Prototypes ----------------------
 
 Pizza.prototype.attachListeners = function() {
   const pizzaId = this.pizzaId;
@@ -51,12 +84,20 @@ Pizza.prototype.attachListeners = function() {
   });
 };
 
-Pizza.prototype.applyId = function(pizzaId) {
-  this.pizzaId = pizzaId;
+Pizza.prototype.addToCart = function() {
+  const sizeCapitalized = this.size.charAt(0).toUpperCase() + this.size.slice(1);
+  const sauceCapitalized = this.sauce.charAt(0).toUpperCase() + this.sauce.slice(1);
+  const cheeseCapitalized = splitHyphen(this.cheese);
+  const toppingsCapitalized = this.capitalizeToppings();
+
+  $("#pizzas").append("<h5 id='pizza-name-in-cart-" + this.pizzaId + "'>" + this.name + " - $" + this.price + "</h5>");
+  $("#pizzas").append("<p id='pizza-in-cart-" + this.pizzaId + "'><span class='pizza-key'>Size: </span>" + sizeCapitalized + "</br><span class='pizza-key'>Sauce: </span>" + sauceCapitalized + "<br><span class='pizza-key'>Cheese: </span>" + cheeseCapitalized + "<br><span class='pizza-key'>Toppings: </span>" + toppingsCapitalized + "</p>");
 };
 
+// UI Logic --------------------------------
+
 $(document).ready(function() {
-  $("#small").prop('checked', true);
+  $("#medium").prop('checked', true);
   $("#tomato").prop('checked', true);
   $("#mozzarella").prop('checked', true);
   let cart = 0;
@@ -106,10 +147,10 @@ $(document).ready(function() {
     clientPizza.addToCart();
     newCartTotal = clientPizza.updateCartTotal(cart);
     clientPizza.attachListeners();
-    updateCartTotal(newCartTotal);
-    cart = newCartTotal;
+    $("#cart-total").text(newCartTotal);
     uncheckToppings();
     $("#name-update").html("<input type='text' id='pizza-name-field' value='Pizza " + iteration + "'>");
+    cart = newCartTotal;
     pizzaId ++;
     iteration ++;
   });
@@ -136,7 +177,6 @@ function toppingsAssembler() {
 };
 
 function updateCartTotal(newCartTotal) {
-  console.log("this should update the text with" + newCartTotal);
   $("#cart-total").text(newCartTotal);
 };
 
