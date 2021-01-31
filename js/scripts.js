@@ -64,11 +64,6 @@ Pizza.prototype.capitalizeToppings = function() {
   return toppingsArrayCapitalized.join(", ");
 };
 
-Pizza.prototype.updateCartTotal = function(cartTotal) {
-  let newCartTotal = this.price + cartTotal;
-  return newCartTotal;
-};
-
 // UI Logic Pizza Prototypes ----------------------
 
 Pizza.prototype.attachListeners = function() {
@@ -139,7 +134,7 @@ $(document).ready(function() {
     clientPizza.addPrice();
     clientPizza.pizzaId = pizzaId;
     clientPizza.addToCart();
-    newCartTotal = clientPizza.updateCartTotal(cart);
+    newCartTotal = clientPizza.price + cart;
     clientPizza.attachListeners();
     $("#cart-total").text(newCartTotal);
     uncheckToppings();
