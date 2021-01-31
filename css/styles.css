@@ -102,6 +102,8 @@ html {
   display: none;
   border: 5px solid darkorange;
   border-radius: 20px;
+  width: 90%;
+  margin: auto;
   background-image: url('img/pizza-background.jpg');
   background-size: 250px;
   color: white;
@@ -140,7 +142,7 @@ html {
   background-image: url('img/pizza-background.jpg');
   background-size: 250px;
   border-radius: 15px;
-  width: 25%;
+  width: 50%;
   margin: auto;
   color: white;
   margin-bottom: 20px;
@@ -218,7 +220,6 @@ h3 {
   font-family: 'Permanent Marker', cursive;
   font-size: 40px;
   text-align: center;
-  cursor: pointer;
   color: white;
   text-shadow:
     0px 0px 5px orangered,
@@ -227,6 +228,10 @@ h3 {
     0px 0px 30px orangered,
     0px 0px 50px orangered,
     0px 0px 80px orangered;
+}
+
+.pizza-headers {
+  cursor: pointer;
 }
 
 .pizza-headers:hover {
@@ -271,13 +276,13 @@ h3 {
 }
 
 #submit-button {
-  border: 5px solid darkorange;
+  border: 2.5px solid darkorange;
   outline: none;
-  border-radius: 15px;
+  border-radius: 5px;
   background-image: url('img/pizza-background.jpg');
   background-size: 250px;
-  height: 100px;
-  width: 30%;
+  height: 75px;
+  width: 300px;
   margin: auto;
   display: block;
   font-family: 'Permanent Marker', cursive;
@@ -291,6 +296,7 @@ h3 {
     0px 0px 30px orangered,
     0px 0px 50px orangered,
     0px 0px 80px orangered;
+  margin-bottom: 20px;
 }
 
 #submit-button:hover {
@@ -305,5 +311,33 @@ h3 {
 }
 
 #submit-button:active {
-  border: 10px solid darkorange;
+  border: 5px solid darkorange;
+  border-radius: 20px;
+}
+
+#cart {
+  display: none;
+  background-image: url('img/pizza-background.jpg');
+  background-size: 250px;
+  border: 5px solid darkorange;
+  border-radius: 20px;
+  width: 75%;
+  margin: auto;
+  font-family: 'Caveat', cursive;
+  font-size: 30px;
+  text-align: center;
+  color: white;
+  text-shadow:
+    0px 0px 5px orangered,
+    0px 0px 10px orangered,
+    0px 0px 20px orangered,
+    0px 0px 30px orangered,
+    0px 0px 50px orangered,
+    0px 0px 80px orangered;
+  padding: 30px;
+  margin-bottom: 20px;
+}
+
+#cart p {
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }

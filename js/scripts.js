@@ -54,7 +54,7 @@ $(document).ready(function() {
     const pizzaSize = $("input:radio[name=pizza-size]:checked").val();
     const pizzaToppings = toppingsAssembler();
     const clientPizza = new Pizza(pizzaSize, pizzaToppings);
-    $("#total-cost").show();
+    $("#cart").slideDown();
     $("#pizza-total").html(clientPizza.price());
   });
 });
