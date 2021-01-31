@@ -50,6 +50,11 @@ Expect: (undefinedFilter(uglyArray)).toEqual(["one", 2, 3, 5, "six"])
 Describe: splitHyphen()
 Test: "It should return a string with a space replacing the hyphen used in multi-word element IDs and classes as well as capitalizing the first letter of each word"
 Expect: splitHyphen("red-bell-peppers").toEqual("Red Bell Peppers")
+
+Describe: Pizza.prototype.capitalizeToppings()
+Test: "It should return a string from the array value of the toppings key with hyphens replaced with spaces, a comma and a space between each element, and the first letter of every word capitalized"
+Code: const pizza5 = new Pizza("pizza5", "large", "tomato", "mozzarella", ["bacon", "ground-beef", "ham", "italian-sausage", "pepperoni", "salami", "garlic", "green-bell-peppers", "jalapenos", "mushroom", "olives", "onion", "pineapple"])
+Expect: (pizza5.capitalizeToppings()).toEqual("Bacon, Ground Beef, Ham, Italian Sausage, Pepperoni, Salami, Garlic, Green Bell Peppers, Jalapenos, Mushroom, Olives, Onion, Pineapple")
 ```
 ## Contact Information
 #### Mike Pingel
