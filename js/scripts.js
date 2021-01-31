@@ -53,10 +53,8 @@ Pizza.prototype.applyId = function(pizzaId) {
 Pizza.prototype.capitalizeToppings = function() {
   const toppingsArrayCapitalized = [];
   const toppings = this.toppings;
-  console.log(typeof(toppings));
   if (toppings.length > 0) {
     toppings.map(function (element) {
-      console.log(element);
       if (element.includes("-")) {
         toppingsArrayCapitalized.push(splitHyphen(element));
       } else {
