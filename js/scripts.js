@@ -165,10 +165,6 @@ function toppingsAssembler() {
   return filteredPizzaToppings;
 };
 
-function updateCartTotal(newCartTotal) {
-  $("#cart-total").text(newCartTotal);
-};
-
 function uncheckToppings() {
   $("#bacon").prop('checked', false);
   $("#ground-beef").prop('checked', false);
