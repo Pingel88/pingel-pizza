@@ -55,6 +55,11 @@ Describe: Pizza.prototype.capitalizeToppings()
 Test: "It should return a string from the array value of the toppings key with hyphens replaced with spaces, a comma and a space between each element, and the first letter of every word capitalized"
 Code: const pizza5 = new Pizza("pizza5", "large", "tomato", "mozzarella", ["bacon", "ground-beef", "ham", "italian-sausage", "pepperoni", "salami", "garlic", "green-bell-peppers", "jalapenos", "mushroom", "olives", "onion", "pineapple"])
 Expect: (pizza5.capitalizeToppings()).toEqual("Bacon, Ground Beef, Ham, Italian Sausage, Pepperoni, Salami, Garlic, Green Bell Peppers, Jalapenos, Mushroom, Olives, Onion, Pineapple")
+
+Describe: Pizza.prototype.newCartTotal()
+Test: "It should return the sum of the number assigned to the cart variable and the number value of the pizza object this.price property"
+Code: let cart = 5; const pizza6 = new Pizza("pizza6", "large", "tomato", "mozzarella", ["bacon", "ground-beef", "italian-sausage", "pepperoni", "jalapenos", "mushroom", "pineapple"]);pizza6.addPrice()
+Expect: (pizza6.newCartTotal(cart)).toEqual(41)
 ```
 ## Contact Information
 #### Mike Pingel

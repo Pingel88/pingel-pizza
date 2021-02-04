@@ -64,23 +64,8 @@ Pizza.prototype.capitalizeToppings = function() {
   return toppingsArrayCapitalized.join(", ");
 };
 
-// UI Logic Pizza Prototypes ----------------------
-
-Pizza.prototype.attachListeners = function() {
-  const pizzaId = this.pizzaId;
-  $("#pizzas").on("click", "#pizza-name-in-cart-" + pizzaId, function() {
-    $("#pizza-in-cart-" + pizzaId).slideToggle();
-  });
-};
-
-Pizza.prototype.addToCart = function() {
-  const sizeCapitalized = this.size.charAt(0).toUpperCase() + this.size.slice(1);
-  const sauceCapitalized = this.sauce.charAt(0).toUpperCase() + this.sauce.slice(1);
-  const cheeseCapitalized = splitHyphen(this.cheese);
-  const toppingsCapitalized = this.capitalizeToppings();
-
-  $("#pizzas").append("<h5 id='pizza-name-in-cart-" + this.pizzaId + "'>" + this.name + " - $" + this.price + "</h5>");
-  $("#pizzas").append("<p id='pizza-in-cart-" + this.pizzaId + "'><span class='pizza-key'>Size: </span>" + sizeCapitalized + "</br><span class='pizza-key'>Sauce: </span>" + sauceCapitalized + "<br><span class='pizza-key'>Cheese: </span>" + cheeseCapitalized + "<br><span class='pizza-key'>Toppings: </span>" + toppingsCapitalized + "</p>");
+Pizza.prototype.newCartTotal = function(cart) {
+  return this.price + cart;
 };
 
 // UI Logic --------------------------------
@@ -92,7 +77,7 @@ $(document).ready(function() {
   let cart = 0;
   let iteration = 2;
   let pizzaId = 0;
-
+  
   $("#build-pizza").click(function() {
     $("#heading-text").hide();
     $("#heading").slideUp();
@@ -100,28 +85,28 @@ $(document).ready(function() {
     $("#pizza-menu").slideDown();
     $("#main-interface").slideDown();
   });
-
+  
   $("#size-header").click(function() {
     $("#radio-buttons-size").slideToggle();
   });
-
+  
   $("#sauce-header").click(function() {
     $("#radio-buttons-sauce").slideToggle();
   });
-
+  
   $("#cheese-header").click(function() {
     $("#radio-buttons-cheese").slideToggle();
   });
-
+  
   $("#meats-header").click(function() {
     $("#radio-buttons-meats").slideToggle();
   });
-
+  
   $("#unmeats-header").click(function() {
     $("#radio-buttons-unmeats").slideToggle();
   });
-
-
+  
+  
   $("form.pizza").submit(function(event) {
     event.preventDefault();
     const pizzaName = $("input#pizza-name-field").val();
@@ -133,9 +118,9 @@ $(document).ready(function() {
     $("#cart").slideDown();
     clientPizza.addPrice();
     clientPizza.pizzaId = pizzaId;
-    clientPizza.addToCart();
-    newCartTotal = clientPizza.price + cart;
-    clientPizza.attachListeners();
+    addToCart(clientPizza);
+    newCartTotal = clientPizza.newCartTotal(cart);
+    attachListeners(clientPizza);
     $("#cart-total").text(newCartTotal);
     uncheckToppings();
     $("#name-update").html("<input type='text' id='pizza-name-field' value='Pizza " + iteration + "' autocomplete='off'>");
@@ -180,3 +165,20 @@ function uncheckToppings() {
   $("#onion").prop('checked', false);
   $("#pineapple").prop('checked', false);
 };
+
+function attachListeners(clientPizza) {
+  const pizzaId = clientPizza.pizzaId;
+  $("#pizzas").on("click", "#pizza-name-in-cart-" + pizzaId, function() {
+    $("#pizza-in-cart-" + pizzaId).slideToggle();
+  });
+};
+
+function addToCart(clientPizza) {
+  const sizeCapitalized = clientPizza.size.charAt(0).toUpperCase() + clientPizza.size.slice(1);
+  const sauceCapitalized = clientPizza.sauce.charAt(0).toUpperCase() + clientPizza.sauce.slice(1);
+  const cheeseCapitalized = splitHyphen(clientPizza.cheese);
+  const toppingsCapitalized = clientPizza.capitalizeToppings();
+  
+  $("#pizzas").append("<h5 id='pizza-name-in-cart-" + clientPizza.pizzaId + "'>" + clientPizza.name + " - $" + clientPizza.price + "</h5>");
+  $("#pizzas").append("<p id='pizza-in-cart-" + clientPizza.pizzaId + "'><span class='pizza-key'>Size: </span>" + sizeCapitalized + "</br><span class='pizza-key'>Sauce: </span>" + sauceCapitalized + "<br><span class='pizza-key'>Cheese: </span>" + cheeseCapitalized + "<br><span class='pizza-key'>Toppings: </span>" + toppingsCapitalized + "</p>");
+}
